@@ -1,0 +1,26 @@
+{
+  "name": "typescript-features",
+  "version": "1.0.0",
+  "description": "Examples of Typescript features",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominikStefancik/Typescript-Features.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "Dominik Stefancik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DominikStefancik/Typescript-Features/issues"
+  },
+  "homepage": "https://github.com/DominikStefancik/Typescript-Features#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
