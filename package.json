@@ -2,7 +2,7 @@
   "name": "typescript-features",
   "version": "1.0.0",
   "description": "Examples of Typescript features",
-  "main": "app.js",
+  "main": "dist/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server"
