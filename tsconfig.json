@@ -62,5 +62,9 @@
 
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+  "exclude": [
+    "node_modules", // node_modules folder is excluded by default, it doesn't have to be here
+    "basic-types"
+  ]
 }
