@@ -72,6 +72,7 @@
   "exclude": [
     "node_modules", // node_modules folder is excluded by default, it doesn't have to be here
     "src/basic-types",
-    "src/compiler-settings"
+    "src/compiler-settings",
+    "src/next-gen-features"
   ]
 }
