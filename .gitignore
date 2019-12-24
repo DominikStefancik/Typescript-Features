@@ -2,6 +2,7 @@
 
 # compiled output
 *.js
+*.map 
 
 # dependencies
 /node_modules
