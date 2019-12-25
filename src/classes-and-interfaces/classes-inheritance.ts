@@ -1,15 +1,14 @@
-class Department {
+abstract class Department {
   name: string;
   // "protected" ensures that the property is accessible also to subclasses
   protected employees: string[] = [];
 
-  constructor(private id: string, name: string) {
+  constructor(protected id: string, name: string) {
     this.name = name;
   }
 
-  describe() {
-    console.log(`Department (${this.id}):`, this.name);
-  }
+  // an abstract class should have defined a return type to indicate what it returns
+  abstract describe(): void;
 
   addEmployee(employeesName: string) {
     this.employees.push(employeesName);
@@ -25,6 +24,10 @@ class ITDepartment extends Department {
   constructor(id: string, private admins: string[]) {
     super(id, "ITDepartment"); // calling "super()" has to be the first statement in the subclass
                                // constructor
+  }
+
+  describe() {
+    console.log(`ITDepartment (${this.id}):`, this.name);
   }
 
   // subclass can override a method defined in the superclass
@@ -45,6 +48,12 @@ itDepartment.printAdmins();
 class AccountingDepartment extends Department {
   private lastReport: string | null;
 
+  constructor(id: string, private reports: string[]) {
+    super(id, "AccountingDepartment"); // calling "super()" has to be the first statement in 
+                                       // the subclass constructor
+    this.lastReport = reports && reports.length > 0 ? reports[reports.length -1] : null;                                   
+  }
+
   // the getter is a function which has to start with "get" keyword and has any name 
   get getLastReport() {
     return this.lastReport;
@@ -55,10 +64,8 @@ class AccountingDepartment extends Department {
     this.lastReport = report;
   }
 
-  constructor(id: string, private reports: string[]) {
-    super(id, "AccountingDepartment"); // calling "super()" has to be the first statement in 
-                                       // the subclass constructor
-    this.lastReport = reports && reports.length > 0 ? reports[reports.length -1] : null;                                   
+  describe() {
+    console.log(`AccountingDepartment (${this.id}):`, this.name);
   }
 
   addReport(report: string) {
