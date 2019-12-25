@@ -1,4 +1,4 @@
-class Department {
+class DepartmentClass {
   name: string;
   private employees: string[] = [];
 
@@ -20,7 +20,7 @@ class Department {
   }
 }
 
-const accounting = new Department("Accounting");
+const accounting = new DepartmentClass("Accounting");
 console.log("Instance of class Department:", accounting);
 
 const objectLiteral = {
