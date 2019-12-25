@@ -47,11 +47,23 @@ itDepartment.printAdmins();
 
 class AccountingDepartment extends Department {
   private lastReport: string | null;
+  private static instance: AccountingDepartment;
 
-  constructor(id: string, private reports: string[]) {
+  private constructor(id: string, private reports: string[]) {
     super(id, "AccountingDepartment"); // calling "super()" has to be the first statement in 
                                        // the subclass constructor
     this.lastReport = reports && reports.length > 0 ? reports[reports.length -1] : null;                                   
+  }
+
+  static getInstance() {
+    // NOTE: "this" keyword in the static method refers to the class and NOT to an instance 
+    // of the class!!!
+    // In this case "this" has access to all static properties and method of the class
+    if (!this.instance) {
+      this.instance = new AccountingDepartment("accounting", []);
+    }
+
+    return this.instance;
   }
 
   // the getter is a function which has to start with "get" keyword and has any name 
@@ -78,7 +90,7 @@ class AccountingDepartment extends Department {
   }
 }
 
-const accountingDepartment = new AccountingDepartment("accounting", []);
+const accountingDepartment = AccountingDepartment.getInstance();
 console.log("AccountingDepartment", accountingDepartment);
 accountingDepartment.printEmployees();
 accountingDepartment.printReports();
