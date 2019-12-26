@@ -75,6 +75,7 @@
     "src/compiler-settings",
     "src/next-gen-features",
     "src/classes-and-interfaces",
-    "src/advanced-types"
+    "src/advanced-types",
+    "src/generics"
   ]
 }
