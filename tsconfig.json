@@ -77,6 +77,7 @@
     "src/classes-and-interfaces",
     "src/advanced-types",
     "src/generics",
-    "src/decorators"
+    "src/decorators",
+    "src/modules-and-namespaces"
   ]
 }
