@@ -1,0 +1,32 @@
+{
+  "name": "select-and-share-place",
+  "version": "1.0.0",
+  "description": "Example of using Typescript and third party libraries",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DominikStefancik/Typescript-Features.git"
+  },
+  "keywords": [
+    "Typescript",
+    "Google",
+    "API"
+  ],
+  "author": "Dominik Stefancik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DominikStefancik/Typescript-Features/issues"
+  },
+  "homepage": "https://github.com/DominikStefancik/Typescript-Features#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
