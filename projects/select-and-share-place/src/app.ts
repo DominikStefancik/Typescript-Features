@@ -15,7 +15,7 @@ const searchAddressHandler = (event: Event) => {
   // send the input address to Google's API
   axios.get(GOOGLE_GEOCODING_API_URL)
           .then((response: AxiosResponse<any>) => {
-            if (response.data.status == "OK") {
+            if (response.data.status !== "OK") {
               throw Error("Could not fetch location.");
             }
             const coordinates = response.data.results[0].geometry.location;
