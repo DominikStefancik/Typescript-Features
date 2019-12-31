@@ -4,7 +4,9 @@
   "description": "Example of using Typescript and third party libraries",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
