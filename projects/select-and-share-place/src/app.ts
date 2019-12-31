@@ -19,6 +19,15 @@ const searchAddressHandler = (event: Event) => {
               throw Error("Could not fetch location.");
             }
             const coordinates = response.data.results[0].geometry.location;
+
+            // show map
+            const map = new google.maps.Map(document.getElementById('map')!, {
+              center: coordinates,
+              zoom: 12
+            });
+
+            // add marker to the found location
+            new google.maps.Marker({position: coordinates, map: map});
           })
           .catch((error: Error) => {
             alert(error.message);
