@@ -2,7 +2,10 @@
 
 # compiled output
 *.js
-*.map 
+*.map
+
+# exceptions
+!/project/**/webpack*.js 
 
 # dependencies
 /node_modules
