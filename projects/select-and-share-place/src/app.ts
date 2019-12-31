@@ -1,5 +1,7 @@
 const form = document.querySelector("form")!;
 
+const GOOGLE_GEOCODING_API_KEY = "";
+
 const searchAddressHandler = (event: Event) => {
   event.preventDefault();
 
@@ -7,7 +9,7 @@ const searchAddressHandler = (event: Event) => {
   const enteredAddress = addressInput.value;
 
   // send the input address to Google's API
-  
+
 }
 
 form.addEventListener("submit", searchAddressHandler);
