@@ -15,9 +15,15 @@ const searchAddressHandler = (event: Event) => {
   // send the input address to Google's API
   axios.get(GOOGLE_GEOCODING_API_URL)
           .then((response: AxiosResponse<any>) => {
-            console.log(response);
+            if (response.data.status == "OK") {
+              throw Error("Could not fetch location.");
+            }
+            const coordinates = response.data.results[0].geometry.location;
           })
-          .catch((error: string) => console.error(error));
+          .catch((error: Error) => {
+            alert(error.message);
+            console.error(error);
+          });
 }
 
 form.addEventListener("submit", searchAddressHandler);
