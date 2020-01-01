@@ -1,8 +1,13 @@
 import express, { Request, Response, NextFunction } from "express";
-import todoRoutes from "./routes/todos";
+import { json } from "body-parser";
+import todoRoutes from "./routes/todo.router";
 
 const PORT = 3000;
 const app = express();
+
+// This middleware parses body of all incoming requests and extracts any JSON data it finds
+// in there to then populate the requests body
+app.use(json());
 
 // Forward all request which start with "/todo" to "todoRouter"
 app.use("/todo", todoRoutes);

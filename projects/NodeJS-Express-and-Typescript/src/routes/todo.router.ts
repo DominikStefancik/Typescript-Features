@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { createTodo } from "../controllers/todo.controller";
 
 // Register middleware (i.e. routes endpoints for incoming requests)
 const router = Router();
@@ -10,7 +11,7 @@ router.get("/");
 router.get("/:id");
 
 // Create a Todo
-router.post("/");
+router.post("/", createTodo);
 
 // Update a Todo with the given id
 router.patch("/:id");
