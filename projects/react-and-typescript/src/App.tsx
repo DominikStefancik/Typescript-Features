@@ -1,5 +1,6 @@
 import React from "react";
 import TodoList from "./components/TodoList";
+import NewTodo from "./components/NewTodo";
 
 const App: React.FunctionComponent = () => {
   const todoList = [
@@ -8,6 +9,7 @@ const App: React.FunctionComponent = () => {
 
   return (
     <div className="App">
+      <NewTodo />
       <TodoList items={todoList}/>
     </div>
   );
