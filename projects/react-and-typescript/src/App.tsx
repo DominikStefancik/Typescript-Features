@@ -7,9 +7,13 @@ const App: React.FunctionComponent = () => {
     { id: "t1", text: "First TODO item"}
   ];
 
+  const todoAddHandler = (text: string) => {
+    
+  };
+
   return (
     <div className="App">
-      <NewTodo />
+      <NewTodo onAddTodo={todoAddHandler}/>
       <TodoList items={todoList}/>
     </div>
   );
