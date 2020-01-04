@@ -11,7 +11,10 @@ const App: React.FunctionComponent = () => {
   const [state, setState] = useState<Todo[]>([]);
 
   const todoAddHandler = (text: string) => {
-    setState([{id: Math.random().toString(), text: text}]);
+    setState(previousState => [
+      ...previousState, // copy a previous state of the array
+      {id: Math.random().toString(), text: text} // and add a new Todo item
+    ]);
   };
 
   return (
