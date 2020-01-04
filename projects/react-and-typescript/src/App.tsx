@@ -17,10 +17,14 @@ const App: React.FunctionComponent = () => {
     ]);
   };
 
+  const todoDeleteHandler = (todoId: string) => {
+    setState(previousState => previousState.filter(todo => todo.id !== todoId));
+  }
+
   return (
     <div className="App">
       <NewTodo onAddTodo={todoAddHandler}/>
-      <TodoList items={state}/>
+      <TodoList items={state} onDeleteTodo={todoDeleteHandler}/>
     </div>
   );
 }
